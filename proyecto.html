@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Fatics<span>Tech Store</span></a>
+        <nav>
+            <ul class="MenuPrincipal" id="menuPrincipal">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="iconoCarritoyMH">
+            <div class="iconoCarrito" onclick="irCarrito()">
+                🛒 <span class="contador" id="contadorCarrito">0</span>
+            </div>
+            <div class="btnMH" onclick="verMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="Portada">
+            <h1>Bienvenido a FaticsTech</h1>
+            <p>Tecnología al alcance de tus manos</p>
+        </section>
+
+        <section class="Productos" id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="grid">
+                
+                <article>
+                    <img src="laptop.png" alt="Laptop">
+                    <h3>Laptop Pro X</h3>
+                    <p>$900.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Laptop Pro X')">-</button>
+                        <span id="numlaptop" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Laptop Pro X', 900)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="audifonos.png" alt="Audífonos">
+                    <h3>Audífonos Bass</h3>
+                    <p>$150.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Audífonos Bass')">-</button>
+                        <span id="numAudifonos" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Audífonos Bass', 150)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="celular.png" alt="Celular">
+                    <h3>Phone Z 2024</h3>
+                    <p>$800.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Phone Z 2024')">-</button>
+                        <span id="numCelular" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Phone Z 2024', 800)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="iphone.png" alt="iPhone">
+                    <h3>iPhone 15 Pro</h3>
+                    <p>$1200.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('iPhone 15 Pro')">-</button>
+                        <span id="numiPhone" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('iPhone 15 Pro', 1200)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="ps5.png" alt="PS5">
+                    <h3>PlayStation 5</h3>
+                    <p>$500.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('PlayStation 5')">-</button>
+                        <span id="numPS5" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('PlayStation 5', 500)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="xbox.png" alt="Xbox">
+                    <h3>Xbox Series X</h3>
+                    <p>$500.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Xbox Series X')">-</button>
+                        <span id="numXbox" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Xbox Series X', 500)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="ipad.png" alt="iPad">
+                    <h3>iPad Air</h3>
+                    <p>$600.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('iPad Air')">-</button>
+                        <span id="numipad" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('iPad Air', 600)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="applewatch.png" alt="Apple Watch">
+                    <h3>Apple Watch S9</h3>
+                    <p>$400.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Apple Watch S9')">-</button>
+                        <span id="numAppleWatch" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Apple Watch S9', 400)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="monitor.png" alt="Monitor">
+                    <h3>Monitor 144Hz</h3>
+                    <p>$300.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Monitor 144Hz')">-</button>
+                        <span id="numMonitor" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Monitor 144Hz', 300)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="teclado.png" alt="Teclado">
+                    <h3>Teclado RGB</h3>
+                    <p>$80.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Teclado RGB')">-</button>
+                        <span id="numTeclado" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Teclado RGB', 80)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="mouse.png" alt="Mouse">
+                    <h3>Mouse Pro</h3>
+                    <p>$50.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Mouse Pro')">-</button>
+                        <span id="numMouse" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Mouse Pro', 50)">+</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="camara.png" alt="Camara">
+                    <h3>Cámara 4K</h3>
+                    <p>$1100.00</p>
+                    <div class="controles">
+                        <button class="btnRojoQuitar" onclick="quitar('Cámara 4K')">-</button>
+                        <span id="numCamara" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Cámara 4K', 1100)">+</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="SobreNosotros" id="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <div style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
+                <p>¡Hola! Somos FaticsTech Store. Más que una tienda de tecnología, somos un grupo de apasionados por la innovación y la tecnología. Nacimos como un proyecto universitario y hoy buscamos traerte los mejores gadgets.</p>
+                <br>
+                <p>Creemos que la tecnología debe ser accesible. Seleccionamos calidad y precio justo para ti. ¡Gracias por confiar en nosotros!</p>
+            </div>
+        </section>
+
+        <section class="Contacto" id="contacto">
+            <h2>Contáctanos</h2>
+            <form id="formContacto" onsubmit="validarFormulario(event)">
+
+                <div class="campo">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label>Correo:</label>
+                    <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="campo">
+                    <label>Mensaje:</label>
+                    <textarea id="mensaje" placeholder="Escribe aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btnEnviar">Enviar</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FaticsTech Store. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>

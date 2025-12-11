@@ -20,9 +20,9 @@ window.onload = function () {
 
             var fila = '<tr>' +
                 '<td>' + nombre + '</td>' +
-                '<td>$' + producto.precio + '</td>' +
+                '<td>Bs.' + producto.precio + '</td>' +
                 '<td>' + producto.cantidad + '</td>' +
-                '<td>$' + subtotal + '</td>' +
+                '<td>Bs.' + subtotal + '</td>' +
                 '</tr>';
 
             cuerpoTabla.innerHTML = cuerpoTabla.innerHTML + fila;
@@ -44,5 +44,5 @@ function finalizarCompra(event) {
 
     localStorage.removeItem('carritoFatics');
 
-    window.location.href = 'proyecto.html';
+    window.location.href = 'index.html';
 }

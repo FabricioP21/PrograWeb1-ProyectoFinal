@@ -42,6 +42,9 @@ header {
 .MenuPrincipal a {
     color: white;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
 }
 
 .MenuPrincipal a:hover {
@@ -79,18 +82,37 @@ header {
 }
 
 .Portada {
-    background-color: #dddddd;
-    height: 300px;
+    /* Fondo */
+    background-image: url('logo.jpeg'); /* Tu imagen */
+    background-color: #dddddd; /* Color de respaldo */
+    background-size: cover;    /* Cubre todo el espacio */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+
+    /* Tamaño y Distribución */
+    height: 500px; /* Aumentamos la altura para ver el logo */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Empuja el texto hacia abajo */
+    
+    /* Espaciado y Color */
+    padding-bottom: 50px; /* Espacio desde el borde inferior */
     text-align: center;
+    color: white; 
 }
 
+/* Agregamos sombras al texto para que se lea bien sobre cualquier fondo */
 .Portada h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+.Portada p {
+    font-size: 1.2rem; /* Un poco más grande para que se note */
+    margin-bottom: -30px;
+    text-shadow: 1px 1px 2px black;
 }
 
 .Productos {
@@ -126,6 +148,17 @@ article {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
+    
+}
+
+article:hover {
+    /* Mueve la tarjeta hacia arriba */
+    transform: translateY(-7px);
+    /* Cambia la sombra */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    /* LA TRANSICIÓN AHORA ESTÁ AQUÍ */
+    /* Solo se activará cuando el mouse ENTRE en el elemento */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 article img {
@@ -221,4 +254,13 @@ footer {
     article {
         width: 100%;
     }
+}
+
+.Contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }

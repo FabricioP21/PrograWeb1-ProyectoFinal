@@ -122,6 +122,33 @@ function actualizarTotalCarrito() {
 
 function validarFormulario(e) {
     e.preventDefault();
-    alert("Mensaje enviado");
+    var nombre = document.getElementById('nombre').value;
+    alert(nombre + ", su mensaje fue enviado");
     document.getElementById('formContacto').reset();
 }
+
+// Escuchamos el evento 'resize' (cuando se cambia el tamaño de la ventana)
+window.addEventListener('resize', function () {
+    // Verificamos si el ancho de la pantalla ahora es mayor a 768px (tu punto de quiebre CSS)
+    if (window.innerWidth > 768) {
+        var menu = document.getElementById('menuPrincipal');
+
+        // Aseguramos que el elemento exista antes de intentar modificarlo
+        if (menu) {
+            // Limpiamos los estilos en línea críticos que agrega la función verMenu().
+            // Al asignar una cadena vacía "", le decimos al navegador que elimine ese estilo en línea
+            // y vuelva a usar lo que dicte la hoja de estilos CSS.
+            menu.style.display = "";
+            menu.style.flexDirection = "";
+            menu.style.position = "";
+            menu.style.width = "";
+            menu.style.top = "";
+            menu.style.right = "";
+            menu.style.background = "";
+
+            // NOTA: Una forma más agresiva pero efectiva si solo usas JS para esto
+            // es limpiar todos los estilos en línea de golpe:
+            // menu.removeAttribute("style");
+        }
+    }
+});
